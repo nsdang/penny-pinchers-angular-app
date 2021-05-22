@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { SubscriptionListComponent } from './subscription-list/subscription-list.component';
 import { SubscriptionItemComponent } from './subscription-list/subscription-item/subscription-item.component';
+import { LoginModalComponent } from './welcome/login-modal/login-modal.component';
+import { SignUpModalComponent } from './welcome/sign-up-modal/sign-up-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     SubscriptionListComponent,
-    SubscriptionItemComponent
+    SubscriptionItemComponent,
+    LoginModalComponent,
+    SignUpModalComponent
   ],
   imports: [
     BrowserModule,
