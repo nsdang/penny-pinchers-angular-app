@@ -15,9 +15,11 @@ var WelcomeComponent = /** @class */ (function () {
     }
     WelcomeComponent.prototype.openLogInModal = function () {
         this.viewLoginModal = true;
+        this.viewSignUpModal = false;
     };
     WelcomeComponent.prototype.openSignUpModal = function () {
         this.viewSignUpModal = true;
+        this.viewLoginModal = false;
     };
     WelcomeComponent.prototype.ngOnInit = function () {
     };

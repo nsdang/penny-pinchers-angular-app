@@ -1,8 +1,11 @@
 <p>welcome works!</p>
 
-<button>Click to sign up</button>
-
 <button (click)="openLogInModal()">Click to login</button>
 <div *ngIf ="viewLoginModal">
     <app-login-modal></app-login-modal>
+</div>
+
+<button (click)="openSignUpModal()">Click to signup</button>
+<div *ngIf ="viewSignUpModal">
+    <app-sign-up-modal></app-sign-up-modal>
 </div>

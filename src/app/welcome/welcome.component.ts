@@ -17,10 +17,12 @@ export class WelcomeComponent implements OnInit {
  
   openLogInModal(){
     this.viewLoginModal = true; 
+    this.viewSignUpModal = false;
   }
 
   openSignUpModal() {
     this.viewSignUpModal = true; 
+    this.viewLoginModal = false; 
   }
 
   ngOnInit(): void {
