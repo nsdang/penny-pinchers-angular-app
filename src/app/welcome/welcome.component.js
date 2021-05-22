@@ -10,11 +10,14 @@ exports.WelcomeComponent = void 0;
 var core_1 = require("@angular/core");
 var WelcomeComponent = /** @class */ (function () {
     function WelcomeComponent() {
-        this.viewLoginModal = false;
         this.viewSignUpModal = false;
+        this.viewLoginModal = false;
     }
     WelcomeComponent.prototype.openLogInModal = function () {
         this.viewLoginModal = true;
+    };
+    WelcomeComponent.prototype.openSignUpModal = function () {
+        this.viewSignUpModal = true;
     };
     WelcomeComponent.prototype.ngOnInit = function () {
     };

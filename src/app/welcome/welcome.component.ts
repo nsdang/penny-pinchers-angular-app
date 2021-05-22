@@ -7,14 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class WelcomeComponent implements OnInit {
-  viewLoginModal : boolean = false;
-  viewSignUpModal : boolean = false;
+  viewLoginModal : boolean;
+  viewSignUpModal : boolean;
 
   constructor() {
+    this.viewSignUpModal = false;
+    this.viewLoginModal = false; 
    }
  
   openLogInModal(){
     this.viewLoginModal = true; 
+  }
+
+  openSignUpModal() {
+    this.viewSignUpModal = true; 
   }
 
   ngOnInit(): void {
