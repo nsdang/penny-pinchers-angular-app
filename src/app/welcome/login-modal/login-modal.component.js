@@ -10,6 +10,8 @@ exports.LoginModalComponent = void 0;
 var core_1 = require("@angular/core");
 var LoginModalComponent = /** @class */ (function () {
     function LoginModalComponent() {
+        this.email = "";
+        this.password = "";
     }
     LoginModalComponent.prototype.ngOnInit = function () {
     };

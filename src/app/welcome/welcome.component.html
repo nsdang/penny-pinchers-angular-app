@@ -2,6 +2,7 @@
 
 <button>Click to sign up</button>
 
-<button>Click to login</button>
-
-<app-login-modal></app-login-modal>
+<button (click)="openLogInModal()">Click to login</button>
+<div *ngIf ="viewLoginModal">
+    <app-login-modal></app-login-modal>
+</div>
