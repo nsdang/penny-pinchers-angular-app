@@ -15,13 +15,15 @@ export class WelcomeComponent implements OnInit {
 
   openLogInModal() {
     const dialogConfig = new MatDialogConfig();
-    this.matDialog.open(LoginModalComponent, dialogConfig);
-  }
+    let dialogRef = this.matDialog.open(LoginModalComponent, dialogConfig);
 
-  openSignUpModal() {
-    const dialogConfig = new MatDialogConfig();
-    this.matDialog.open(SignUpModalComponent, dialogConfig);
-  }
+    dialogRef.afterClosed().subscribe(result => {
+      if(result == "openSignUp") {
+        const dialogConfig = new MatDialogConfig();
+        this.matDialog.open(SignUpModalComponent, dialogConfig);
+      }
+    })
+    }
 
   ngOnInit(): void {}
 }

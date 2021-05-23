@@ -7,7 +7,6 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./login-modal.component.css']
 })
 export class LoginModalComponent implements OnInit {
-  @Output() openSignUpEvent = new EventEmitter<any>();
   email : string;
   password : string; 
 
@@ -24,8 +23,7 @@ export class LoginModalComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  // openSignUpDialog() {
-  //   this.dialogRef.close();
-  //   this.openSignUpEvent.emit("");
-  // }
+  openSignUpDialog() {
+    this.dialogRef.close("openSignUp");
+  }
 }
