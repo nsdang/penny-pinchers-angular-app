@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class WelcomeComponent implements OnInit {
   viewLoginModal : boolean;
   viewSignUpModal : boolean;
+  title:string = 'WELCOME to the SUbscription tracker';
 
   constructor() {
     this.viewSignUpModal = false;
