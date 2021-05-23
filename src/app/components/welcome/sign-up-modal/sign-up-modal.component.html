@@ -1,6 +1,4 @@
-<p>sign-up-modal works!</p>
-
-<div id="signup" class="modal" style="text-align: center">
+<div id="signup" style="text-align: center;">
   <h2>Hello! First time user?</h2>
   <form>
     <label for="name">
@@ -23,6 +21,7 @@
     </label>
     <input type="text" placeholder="Password" name="confirmpwd" /><br /><br />
 
-    <br /><button type="submit">Login</button>
+    <button type = "submit" style="float: inline-end;"><a href="list">Sign up</a></button><br/><br>
+    <button (click) = "close()" style="float: right;">Cancel</button>
   </form>
 </div>

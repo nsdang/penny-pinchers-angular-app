@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { LoginModalComponent } from './login-modal/login-modal.component';
+import { SignUpModalComponent } from './sign-up-modal/sign-up-modal.component';
 
 @Component({
   selector: 'app-welcome',
@@ -6,23 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.css'],
 })
 export class WelcomeComponent implements OnInit {
-  viewLoginModal: boolean;
-  viewSignUpModal: boolean;
   title: string = 'WELCOME to the SUbscription tracker';
-
-  constructor() {
-    this.viewSignUpModal = false;
-    this.viewLoginModal = false;
+  constructor(private matDialog : MatDialog) {
   }
 
   openLogInModal() {
-    this.viewLoginModal = true;
-    this.viewSignUpModal = false;
+    const dialogConfig = new MatDialogConfig();
+    this.matDialog.open(LoginModalComponent, dialogConfig);
   }
 
   openSignUpModal() {
-    this.viewSignUpModal = true;
-    this.viewLoginModal = false;
+    const dialogConfig = new MatDialogConfig();
+    this.matDialog.open(SignUpModalComponent, dialogConfig);
   }
 
   ngOnInit(): void {}

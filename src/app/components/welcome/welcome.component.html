@@ -1,13 +1,3 @@
-<button (click)="openLogInModal()">Click to login</button>
-<div *ngIf="viewLoginModal">
-  <app-login-modal></app-login-modal>
-</div>
-
-<button (click)="openSignUpModal()">Click to signup</button>
-<div *ngIf="viewSignUpModal">
-  <app-sign-up-modal></app-sign-up-modal>
-</div>
-
 <meta charset="UTF-8" />
 <!-- Set the page to the width of the device and set the zoon level -->
 <meta
@@ -113,18 +103,28 @@
             id="grad2"
             class="btn btn-primary btn-lg"
             style="background-color: #458cff"
-            (click)="openLogInModal()"
+            (click) = "openLogInModal()"
           >
             Login
           </button>
-          <div *ngIf="viewLoginModal">
-            <app-login-modal></app-login-modal>
+
+
+          <button
+          id="grad2"
+          class="btn btn-primary btn-lg"
+          style="background-color: #458cff"
+          (click) = "openSignUpModal()"
+        >
+          Sign up
+        </button>
           </div>
         </div>
       </div>
     </div>
 
-    <script
+    <!-- <div><app-login-modal (openSignUpEvent) = 'openSignUpModal()'></app-login-modal>  -->
+    
+      <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
@@ -134,5 +134,4 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
-  </div>
 </body>
