@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.title .mat-grid-tile-content {
+  padding-right: 40px;
+  justify-content: flex-end;
+}
+.input .mat-grid-tile-content {
+  justify-content: flex-start;
+}
+.mat-form-field {
+    width: 50%;
+}

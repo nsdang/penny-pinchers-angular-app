@@ -10,6 +10,26 @@ import { LoginModalComponent } from './welcome/login-modal/login-modal.component
 import { SignUpModalComponent } from './welcome/sign-up-modal/sign-up-modal.component';
 import { SubscriptionItemsTableComponent } from './subscription-list/subscription-items-table/subscription-items-table.component';
 
+//import { SubscriptionItemDetailComponent } from './components/subscription-item-detail/subscription-item-detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
+import { FormsModule } from '@angular/forms';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,13 +38,32 @@ import { SubscriptionItemsTableComponent } from './subscription-list/subscriptio
     SubscriptionItemComponent,
     LoginModalComponent,
     SignUpModalComponent,
-    SubscriptionItemsTableComponent
+    SubscriptionItemsTableComponent,
+    //SubscriptionItemDetailComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+
+    FormsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatMenuModule,
+    MatInputModule,
+    MatSelectModule,
+    MatGridListModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
