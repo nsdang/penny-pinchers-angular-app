@@ -1,12 +1,8 @@
-interface ISubscriptionItemModelAngular {
-    listId: Number,
-    itemId: Number,
-    serviceName: String,
-    addDate: Date,
-    dueDate: Date,
-    price: Number,
-    isArchived: Boolean,
-    subscriptionType: String
+export interface SubscriptionItemModelAngular {
+    userId: string;
+    serviceName: String;
+    recurringDate: String;
+    subscriptionType: String;
+    price: Number;
+    isDeleted: Boolean
 }
-
-export default ISubscriptionItemModelAngular;

@@ -5,10 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { SubscriptionListComponent } from './components/subscription-list/subscription-list.component';
-import { SubscriptionItemComponent } from './components/subscription-list/subscription-item/subscription-item.component';
 import { LoginModalComponent } from './components/welcome/login-modal/login-modal.component';
 import { SignUpModalComponent } from './components/welcome/sign-up-modal/sign-up-modal.component';
-import { SubscriptionItemsTableComponent } from './components/subscription-list/subscription-items-table/subscription-items-table.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -36,10 +34,8 @@ import { SubscriptionItemDetailComponent } from './components/subscription-item-
     AppComponent,
     WelcomeComponent,
     SubscriptionListComponent,
-    SubscriptionItemComponent,
     LoginModalComponent,
     SignUpModalComponent,
-    SubscriptionItemsTableComponent,
     SubscriptionItemDetailComponent
   ],
   imports: [

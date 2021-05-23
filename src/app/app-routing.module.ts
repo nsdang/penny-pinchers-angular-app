@@ -6,7 +6,7 @@ import { SubscriptionItemDetailComponent } from './components/subscription-item-
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
-  { path: 'list', component: SubscriptionListComponent },
+  { path: 'list/:userId', component: SubscriptionListComponent },
   { path: 'itemDetail', component: SubscriptionItemDetailComponent },
   // { path: 'subscriptionItem/:itmeId', component: ItemComponent}
 ];
