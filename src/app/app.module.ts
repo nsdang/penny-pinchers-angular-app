@@ -3,19 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { SubscriptionListComponent } from './subscription-list/subscription-list.component';
-import { SubscriptionItemComponent } from './subscription-list/subscription-item/subscription-item.component';
-import { LoginModalComponent } from './welcome/login-modal/login-modal.component';
-import { SignUpModalComponent } from './welcome/sign-up-modal/sign-up-modal.component';
-import { SubscriptionItemsTableComponent } from './subscription-list/subscription-items-table/subscription-items-table.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { SubscriptionListComponent } from './components/subscription-list/subscription-list.component';
+import { SubscriptionItemComponent } from './components/subscription-list/subscription-item/subscription-item.component';
+import { LoginModalComponent } from './components/welcome/login-modal/login-modal.component';
+import { SignUpModalComponent } from './components/welcome/sign-up-modal/sign-up-modal.component';
+import { SubscriptionItemsTableComponent } from './components/subscription-list/subscription-items-table/subscription-items-table.component';
 
-//import { SubscriptionItemDetailComponent } from './components/subscription-item-detail/subscription-item-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
+
 import { FormsModule } from '@angular/forms';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
@@ -29,6 +29,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { SubscriptionItemDetailComponent } from './components/subscription-item-detail/subscription-item-detail.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
     LoginModalComponent,
     SignUpModalComponent,
     SubscriptionItemsTableComponent,
-    //SubscriptionItemDetailComponent,
+    SubscriptionItemDetailComponent
   ],
   imports: [
     BrowserModule,

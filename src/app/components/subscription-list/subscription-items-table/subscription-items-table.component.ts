@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import ISubscriptionListModelAngular from '../../share/ISubscriptionListModelAngular';
+import ISubscriptionListModelAngular from '../../../models/ISubscriptionListModelAngular';
 
 @Component({
   selector: 'subscription-items-table',
