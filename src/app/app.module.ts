@@ -8,6 +8,7 @@ import { SubscriptionListComponent } from './subscription-list/subscription-list
 import { SubscriptionItemComponent } from './subscription-list/subscription-item/subscription-item.component';
 import { LoginModalComponent } from './welcome/login-modal/login-modal.component';
 import { SignUpModalComponent } from './welcome/sign-up-modal/sign-up-modal.component';
+import { SubscriptionItemsTableComponent } from './subscription-list/subscription-items-table/subscription-items-table.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SignUpModalComponent } from './welcome/sign-up-modal/sign-up-modal.comp
     SubscriptionListComponent,
     SubscriptionItemComponent,
     LoginModalComponent,
-    SignUpModalComponent
+    SignUpModalComponent,
+    SubscriptionItemsTableComponent
   ],
   imports: [
     BrowserModule,
