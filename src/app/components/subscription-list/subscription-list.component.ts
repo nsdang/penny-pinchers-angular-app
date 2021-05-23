@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Location } from '@angular/common';
-import { SubscriptionListService } from '../../services/subscription-list.service'
-import { SubscriptionItemModelAngular } from '../../models/ISubscriptionItemModelAngular'
 
 
 @Component({
@@ -12,25 +8,13 @@ import { SubscriptionItemModelAngular } from '../../models/ISubscriptionItemMode
 })
 
 export class SubscriptionListComponent implements OnInit {
-  userId: string = '';
-  items: SubscriptionItemModelAngular[];
 
-  constructor(
-    private route: ActivatedRoute,
-    private location: Location,
-    private allItemsService: SubscriptionListService
-  ) { 
-      this.items = [];
+
+  constructor() { 
+      
   }
 
   ngOnInit(): void {
-    this.userId = this.route.snapshot.params['userId'];
-    this.allItemsService.getSubscriptionItems(this.userId)
-    .subscribe(
-      result => {
-        this.items = result;
-      },
-    );
   }
 }
 

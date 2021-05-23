@@ -28,6 +28,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { SubscriptionItemDetailComponent } from './components/subscription-item-detail/subscription-item-detail.component';
+import { SubscriptionItemsTableComponent } from './components/subscription-list/subscription-items-table/subscription-items-table.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SubscriptionItemDetailComponent } from './components/subscription-item-
     SubscriptionListComponent,
     LoginModalComponent,
     SignUpModalComponent,
-    SubscriptionItemDetailComponent
+    SubscriptionItemDetailComponent,
+    SubscriptionItemsTableComponent
   ],
   imports: [
     BrowserModule,
