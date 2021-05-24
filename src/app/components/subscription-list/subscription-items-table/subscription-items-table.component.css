@@ -1,0 +1,14 @@
+table {
+    margin-left: 250px;
+    margin-right: 250px;
+    border-spacing: 15px;
+    border-collapse: collapse;
+    font-size:15pt;
+}
+
+td,th {
+    padding: 10px;
+    /* border-bottom: 2px solid #8ebf42; */
+    text-align: center;
+}
+

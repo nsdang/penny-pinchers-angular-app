@@ -23,12 +23,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
+import { MatSelectChange, MatSelectModule } from '@angular/material/select';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { SubscriptionItemDetailComponent } from './components/subscription-item-detail/subscription-item-detail.component';
 import { SubscriptionItemsTableComponent } from './components/subscription-list/subscription-items-table/subscription-items-table.component';
+import {MatListModule} from '@angular/material/list';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,8 @@ import { SubscriptionItemsTableComponent } from './components/subscription-list/
     MatGridListModule,
     MatDatepickerModule,
     MatMomentDateModule,
+    MatListModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent],

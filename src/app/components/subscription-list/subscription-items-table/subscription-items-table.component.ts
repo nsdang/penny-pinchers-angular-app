@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { SubscriptionService } from '../../../services/subscription.service';
 import { SubscriptionItemModelAngular } from '../../../models/ISubscriptionItemModelAngular'
 
+
 @Component({
   selector: 'app-subscription-items-table',
   templateUrl: './subscription-items-table.component.html',
