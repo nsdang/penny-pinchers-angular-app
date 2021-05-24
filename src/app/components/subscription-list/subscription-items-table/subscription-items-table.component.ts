@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
-import { SubscriptionListService } from '../../../services/subscription-list.service'
+import { SubscriptionService } from '../../../services/subscription.service';
 import { SubscriptionItemModelAngular } from '../../../models/ISubscriptionItemModelAngular'
 
 @Component({
@@ -16,13 +16,13 @@ export class SubscriptionItemsTableComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private allItemsService: SubscriptionListService) { 
+    private allItemsService: SubscriptionService) { 
       this.items = [];
     }
 
   ngOnInit(): void {
     this.userId = this.route.snapshot.params['userId'];
-    this.allItemsService.getSubscriptionItems(this.userId)
+    this.allItemsService.getAllSubscriptionItems(this.userId)
     .subscribe(
       result => {
         this.items = result;
