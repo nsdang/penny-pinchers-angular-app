@@ -17,3 +17,15 @@
   margin-right: 20px;
   float: right;
 }
+
+.aboutButton{
+  position: absolute; 
+  right: 200px;
+  background-color: #654C4F;
+}
+
+.profileButton {
+  position: absolute; 
+  right: 100px;
+  background-color: #F75E50
+}

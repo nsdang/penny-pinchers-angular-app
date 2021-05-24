@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { SubscriptionItem } from '../models/subscriptionItemDetail';
+import { SubscriptionItem } from '../models/ISubscriptionItemDetail';
 import { SubscriptionItemModelAngular } from '../models/ISubscriptionItemModelAngular';
 import { Observable } from 'rxjs';
 
@@ -13,7 +13,8 @@ export class SubscriptionService {
   constructor(private http:HttpClient) { }
 
   // get a subscription item
-  getSubscriptionDetail(index: string):Observable<SubscriptionItem> {
+  getSubscriptionDetail(index: string|null):Observable<SubscriptionItem> {
+    if (!index)  return this.http.get<SubscriptionItem>(this.subscriptionUrl + 'app/item/0');
     return this.http.get<SubscriptionItem>(this.subscriptionUrl + 'app/item/' + index);
   }
 
@@ -22,4 +23,8 @@ export class SubscriptionService {
     return this.http.get<SubscriptionItemModelAngular[]>( this.subscriptionUrl+ 'app/item/user/' + userIndex)
   }
 
+  // update a subscription item
+  updateSubscriptionDetail(index: string, newDetail:SubscriptionItem ):Observable<SubscriptionItem> {
+    return this.http.put<SubscriptionItem>(this.subscriptionUrl + 'app/item/' + index, newDetail);
+  }
 }

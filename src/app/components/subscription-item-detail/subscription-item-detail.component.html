@@ -1,12 +1,11 @@
 <mat-toolbar>
-  <button mat-icon-button class="example-icon">
+  <button mat-icon-button class="example-icon" (click)="onClickBack()">
     <mat-icon>keyboard_backspace</mat-icon>
   </button>
   <span class="itemname">{{ itemDetail.serviceName | uppercase }} Details</span>
   <span class="spacer"></span>
-  <button mat-icon-button class="user-icon">
-    <mat-icon>perm_identity</mat-icon>
-  </button>
+  <button class="aboutButton" mat-raised-button color="primary">About</button>
+  <button class="profileButton" mat-raised-button color="primary">Login as </button>
 </mat-toolbar>
 
 <div class="example-container">
@@ -15,7 +14,7 @@
     <mat-grid-tile class="input">
       <mat-form-field appearance="fill">
         <mat-label>Input</mat-label>
-        <input matInput [value]="itemDetail.serviceName" />
+        <input matInput [value]="itemDetail.serviceName" [(ngModel)]="itemDetail.serviceName" />
       </mat-form-field>
     </mat-grid-tile>
 
@@ -40,7 +39,7 @@
         <input
           matInput
           [matDatepicker]="picker"
-          [(ngModel)]="itemDetail.subscriptionDate"
+          [(ngModel)]="itemDetail.addDate"
         />
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
@@ -90,10 +89,8 @@
     <mat-grid-tile></mat-grid-tile>
 
     <mat-grid-tile class="title">
-      <button mat-raised-button class="cancel-button">Cancel</button>
-      <button mat-raised-button class="save-button" color="primary">
-        Save
-      </button>
+      <button mat-raised-button class="cancel-button" (click)="onClickBack()">Cancel</button>
+      <button mat-raised-button class="save-button" color="primary" (click)="onClickSave()">Save</button>
     </mat-grid-tile>
   </mat-grid-list>
 </div>

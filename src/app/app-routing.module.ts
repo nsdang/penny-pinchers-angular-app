@@ -5,10 +5,10 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { SubscriptionItemDetailComponent } from './components/subscription-item-detail/subscription-item-detail.component';
 
 const routes: Routes = [
-  { path: '', component: WelcomeComponent },
+  { path: 'home', component: WelcomeComponent },
   { path: 'list/:userId', component: SubscriptionListComponent },
-  { path: 'itemDetail', component: SubscriptionItemDetailComponent },
-  // { path: 'subscriptionItem/:itmeId', component: ItemComponent}
+  { path: 'item/:itemId', component: SubscriptionItemDetailComponent, },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
