@@ -10,23 +10,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./subscription-item-detail.component.css'],
 })
 export class SubscriptionItemDetailComponent implements OnInit {
-  optionsSubType = [
-    { id: 1, name: 'Standard' },
-    { id: 2, name: 'Premium' },
-  ];
-  optionsRecur = [
-    { id: 1, name: 'Annually' },
-    { id: 2, name: 'Monthly' },
-    { id: 3, name: 'Daily' },
-  ];
-  optionsReminder = [
-    { id: 1, name: 'Email' },
-    { id: 2, name: 'Phone#' },
-  ];
+  optionsSubType = ['Trial', 'Standard', 'Premium', 'None'];
+  optionsRecur = ['Annually', 'Monthly', 'Daily'];
+  optionsReminder = ['Email', 'Phone#'];
 
-  selectedSubType: number | undefined;
-  selectedRecur: number | undefined;
-  selectedReminder: number | undefined;
+  selectedSubType: string | undefined;
+  selectedRecur: string | undefined;
+  selectedReminder: string | undefined;
 
   itemIdFromRoute: string | null | undefined;
   itemDetail!: SubscriptionItem;
@@ -45,11 +35,41 @@ export class SubscriptionItemDetailComponent implements OnInit {
     // Call service for item detail
     this.subscriptionService.getSubscriptionDetail(this.itemIdFromRoute).subscribe((subItem) => {
       this.itemDetail = subItem;
-      if(subItem.subscriptionType == "Premium") this.selectedSubType = this.optionsSubType[1].id;
-      else this.selectedSubType = this.optionsSubType[0].id;
+      switch (subItem.subscriptionType){
+        case 'Trial':
+          this.selectedSubType = this.optionsSubType[0];
+          break;
+        case 'Standard':
+          this.selectedSubType = this.optionsSubType[1];
+          break;
+        case 'Premium':
+          this.selectedSubType = this.optionsSubType[2];
+          break;
+        default:
+          this.selectedSubType = this.optionsSubType[3];
+      }
+
+      switch (subItem.recurringOption){
+        case 'Annually':
+          this.selectedRecur = this.optionsRecur[0];
+          break;
+        case 'Premium':
+          this.selectedRecur = this.optionsRecur[2];
+          break;
+        default:
+          this.selectedRecur = this.optionsRecur[1];
+          break;
+      }
+
+      switch (subItem.reminderMethod){
+        case 'Phone#':
+          this.selectedReminder = this.optionsReminder[1];
+          break;
+        default:
+          this.selectedReminder = this.optionsReminder[0];
+          break;
+      }
     });
-    this.selectedRecur = this.optionsRecur[1].id;
-    this.selectedReminder = this.optionsReminder[1].id;
   }
 
   onClickBack(): void {

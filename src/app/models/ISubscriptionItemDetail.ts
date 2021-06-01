@@ -7,4 +7,6 @@ export interface SubscriptionItem {
   price: Number;
   isArchived: Boolean;
   subscriptionType: string;
+  recurringOption: string;
+  reminderMethod: string;
 }

@@ -22,11 +22,11 @@
     <mat-grid-tile class="input">
       <mat-form-field appearance="fill">
         <mat-label>Select</mat-label>
-        <mat-select [(value)]="selectedSubType">
+        <mat-select [(value)]="selectedSubType" [(ngModel)]="itemDetail.subscriptionType">
           <mat-option
             *ngFor="let option of optionsSubType"
-            [value]="option.id"
-            >{{ option.name }}</mat-option
+            [value]="option"
+            >{{ option }}</mat-option
           >
         </mat-select>
       </mat-form-field>
@@ -50,9 +50,9 @@
     <mat-grid-tile class="input">
       <mat-form-field appearance="fill">
         <mat-label>Select</mat-label>
-        <mat-select [(value)]="selectedRecur">
-          <mat-option *ngFor="let option of optionsRecur" [value]="option.id">{{
-            option.name
+        <mat-select [(value)]="selectedRecur" [(ngModel)]="itemDetail.recurringOption">
+          <mat-option *ngFor="let option of optionsRecur" [value]="option">{{
+            option
           }}</mat-option>
         </mat-select>
       </mat-form-field>
@@ -62,11 +62,11 @@
     <mat-grid-tile class="input">
       <mat-form-field appearance="fill">
         <mat-label>Select</mat-label>
-        <mat-select [(value)]="selectedReminder">
+        <mat-select [(value)]="selectedReminder" [(ngModel)]="itemDetail.reminderMethod">
           <mat-option
             *ngFor="let option of optionsReminder"
-            [value]="option.id"
-            >{{ option.name }}</mat-option
+            [value]="option"
+            >{{ option }}</mat-option
           >
         </mat-select>
       </mat-form-field>
