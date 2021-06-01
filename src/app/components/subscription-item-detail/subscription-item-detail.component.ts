@@ -87,6 +87,6 @@ export class SubscriptionItemDetailComponent implements OnInit {
     this.subscriptionService.updateSubscriptionDetail(itemId, this.itemDetail).subscribe((newItem) => {
       console.log(newItem)
     });
-    this.location.back();
+    this.onClickBack();
   }
 }
