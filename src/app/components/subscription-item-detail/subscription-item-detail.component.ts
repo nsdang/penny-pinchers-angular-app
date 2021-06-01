@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { SubscriptionService } from '../../services/subscription.service';
 import { SubscriptionItem } from '../../models/ISubscriptionItemDetail';
 import { Location } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-subscription-item-detail',
@@ -24,7 +25,8 @@ export class SubscriptionItemDetailComponent implements OnInit {
   constructor(
     private subscriptionService: SubscriptionService,
     private location: Location,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -70,6 +72,10 @@ export class SubscriptionItemDetailComponent implements OnInit {
           break;
       }
     });
+  }
+
+  onClickAbout(): void {
+    this.router.navigateByUrl('/about');
   }
 
   onClickBack(): void {
