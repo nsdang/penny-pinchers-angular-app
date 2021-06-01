@@ -31,6 +31,7 @@ import { SubscriptionItemDetailComponent } from './components/subscription-item-
 import { SubscriptionItemsTableComponent } from './components/subscription-list/subscription-items-table/subscription-items-table.component';
 import {MatListModule} from '@angular/material/list';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     LoginModalComponent,
     SignUpModalComponent,
     SubscriptionItemDetailComponent,
-    SubscriptionItemsTableComponent
+    SubscriptionItemsTableComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
