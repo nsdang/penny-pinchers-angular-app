@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SubscriptionService {
-  subscriptionUrl:string = 'http://localhost:8080/';
+  subscriptionUrl:string = '/';
 
   constructor(private http:HttpClient) { }
 
