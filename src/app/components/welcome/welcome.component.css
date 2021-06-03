@@ -1,108 +1,54 @@
-#ref {
-  -webkit-box-reflect: below -16px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+.lc {
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
-button {
-    width: 200px;
+.button {
+    width: 250px;
     height: 200px;
     border-radius: 50%;
-    margin: 4px 2px;
+    margin: 10px 2px;
     cursor: pointer;
-    font-size: 40px;
+    font-size: 25px;
+    position:relative;
+    bottom:50px;
+    left:200px;
+    top:230px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#shade {
-  border: 3px solid;
-  padding: 10px;
-  box-shadow: 2px 0px;
+.aboutButton{
+  position: absolute; 
+  right: 143px;
+  background-color: #654C4F;
 }
 
-#grad1 {
-  height: 1500px;
-  background: #e52d27; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #b31217,
-    #e52d27
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #b31217,
-    #e52d27
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.app-brand {
+  font-size:  40px;
+  font-weight: bold;
+  color: #A52A2A;
+  position: absolute; 
+  left: 50px;
 }
 
-#grad2 {
-  background: #1488cc; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #2b32b2,
-    #1488cc
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #2b32b2,
-    #1488cc
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.profile-container {
+  position: absolute; 
+  right: 110px;
 }
 
-#grad3 {
-  background: #e1eec3; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #f05053,
-    #e1eec3
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #f05053,
-    #e1eec3
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.accountIcon {
+  color: #654321;
+  font-size: 50px;
 }
 
-.p1 {
-  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold";
-  font-size: 30px;
-  text-align: center;
+.imagewrap {
+  display:inline-block;
+  position:relative;
+  bottom:380px;
+  right:240px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.p2 {
-  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold";
-}
-
-input.big-checkbox {
-  width: 100px;
-  height: 40px;
-}
-.container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 50px 60px;
-  font-size: 30px;
-}
-
-.jumbotron {
-  background-color: #ff8469;
-  color: black;
-}
-
-/* Adds borders for tabs */
-.tab-content {
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: 10px;
-}
-.nav-tabs {
-  margin-bottom: 0;
-}
-
-.button:hover {
-  background-color: #3e8e41;
-}
-
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}

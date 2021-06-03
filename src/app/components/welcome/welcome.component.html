@@ -13,56 +13,41 @@
 />
 
 <body id="grad1">
-  <!---Shows user that is logged in and "About" option to navigate to About page-->
-  <nav
-    class="navbar navbar-expand-lg navbar-light"
-    style="background-color: #458cff"
-    id="grad2"
-  >
-    <a class="navbar-brand" href="/about"
-      ><p class="p1" style="color: red; text-shadow: 2px 2px 4px #000000">
-        About
-      </p></a
-    >
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-    
-    </div>
-  </nav>
+  <mat-toolbar>
+    <div style="padding-bottom: 36px;"><a href="/about"><button class="aboutButton" mat-raised-button color="primary">About</button></a></div> 
+    <div class="app-brand">
+      <a class ='navbar-item'>
+          <h3 style="color: brown"><b>PENNY PINCHERS</b></h3>
+      </a>
+  </div>
+  </mat-toolbar>
+ 
 
 
   <!-- CONTAINERS -->
   <!-- container puts padding around itself while container-fluid fills the whole screen. Bootstap grids require a container. -->
   <div class="container" id="ref" style="padding-top: 70px">
-    <div class="jumbotron" id="grad3">
+    <div class="jumbotron" style="height: 700px;">
       <!--         Row #1              -->
-      <div class="row align-items-center">
-        <h1 textstyle="font-size: xx-large;">{{ title }}</h1>
+      <div style="text-align: center;">
+        <h1 textstyle="font-size: xx-large;" style="text-align: center;" ><p class="lc">{{ title }}</p></h1>
       </div>
 
       <!-- Row #2 - Login button -->
-      <div class="row align-items-center" align="center" style="padding: 20px">
-        <div class="col col-lg-2" style="width: 200px" align="center">
+      <div class="button" align="center" style="padding: 20px;height: 600px;">
+        <div class="imagewrap" style="width: 200px" align="center">
           <!-- <a id="grad2"class="btn btn-primary btn-lg" href="openLogInModal()" role="button" style="background-color:#458CFF;">LogIn</a>-->
+          
           <button
-            id="grad2"
-            class="btn btn-primary btn-lg"
-            style="background-color: #458cff"
+            class="button"
+            style="background-color:brown;width: 100px;height:100px;"
             (click) = "openLogInModal()"
           >
-            Login
+            <p style="color: white;" class="lc">Login</p>
           </button>
+          <img style="width: 350px;height:600px;" src="../../../assets/Hand.png"/>
           </div>
+         
         </div>
       </div>
     </div>

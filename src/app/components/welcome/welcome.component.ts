@@ -8,8 +8,9 @@ import { SignUpModalComponent } from './sign-up-modal/sign-up-modal.component';
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.css'],
 })
+
 export class WelcomeComponent implements OnInit {
-  title: string = 'WELCOME to the SUbscription tracker';
+  title: string = 'WELCOME to the Subscription tracker';
   constructor(private matDialog : MatDialog) {
   }
 
