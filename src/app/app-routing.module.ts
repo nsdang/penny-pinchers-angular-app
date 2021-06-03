@@ -4,9 +4,11 @@ import { SubscriptionListComponent } from './components/subscription-list/subscr
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { SubscriptionItemDetailComponent } from './components/subscription-item-detail/subscription-item-detail.component';
 import { AboutComponent } from './components/about/about.component';
+import { AddSubscriptionItemComponent } from './components/add-subscription-item/add-subscription-item.component';
 
 const routes: Routes = [
   { path: 'home', component: WelcomeComponent },
+  { path: 'addSubscription', component: AddSubscriptionItemComponent },
   { path: 'subscriptions/:userId', component: SubscriptionListComponent },
   { path: 'subscription/:itemId', component: SubscriptionItemDetailComponent, },
   { path: 'about', component: AboutComponent},

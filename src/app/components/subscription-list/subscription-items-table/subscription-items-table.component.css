@@ -1,6 +1,6 @@
 table {
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 300px;
+    margin-right: 300px;
     border-spacing: 15px;
     border-collapse: collapse;
     font-size:15pt;
@@ -12,3 +12,8 @@ td,th {
     text-align: center;
 }
 
+
+tr:hover {
+    background-color: #E8EAF6;
+    cursor: pointer;
+  }

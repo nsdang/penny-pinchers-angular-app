@@ -1,8 +1,11 @@
-<mat-toolbar>
-    <button class="aboutButton" mat-raised-button color="primary">About</button>
-    <button class="profileButton" mat-raised-button color="primary">Login as </button>
-</mat-toolbar>
+
+<app-navbar></app-navbar>
 
 <app-subscription-items-table></app-subscription-items-table>
 
-<button class="deleteItemButton" mat-raised-button color="primary">Delete Items</button>
+
+
+<div class="add-icon-container">
+    <button mat-icon-button color="primary" (click)="addNewItem()" title="Add Item"><mat-icon class="addItemIcon">add_circle</mat-icon> </button>
+</div>
+

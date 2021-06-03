@@ -1,0 +1,23 @@
+.aboutButton{
+    position: absolute; 
+    right: 160px;
+    background-color: #654C4F;
+}
+
+.app-brand {
+    font-size:  40px;
+    font-weight: bold;
+    color: #A52A2A;
+    position: absolute; 
+    left: 50px;
+}
+
+.profile-container {
+    position: absolute; 
+    right: 110px;
+}
+
+.accountIcon {
+    color: #654321;
+    font-size: 50px;
+}

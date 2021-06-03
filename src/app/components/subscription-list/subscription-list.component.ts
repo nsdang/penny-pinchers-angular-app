@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+import { SubscriptionService } from '../../services/subscription.service';
+import { SubscriptionItemModelAngular } from '../../models/ISubscriptionItemModelAngular'
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,12 +14,17 @@ import { Component, OnInit } from '@angular/core';
 
 export class SubscriptionListComponent implements OnInit {
 
-
-  constructor() { 
-      
-  }
+  constructor(private route: ActivatedRoute,
+    private location: Location,
+    private allItemsService: SubscriptionService,
+    private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  addNewItem() {
+    let route = '/addSubscription';
+    this.router.navigate([route]);
   }
 }
 

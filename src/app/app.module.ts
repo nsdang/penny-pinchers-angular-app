@@ -7,6 +7,7 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { SubscriptionListComponent } from './components/subscription-list/subscription-list.component';
 import { LoginModalComponent } from './components/welcome/login-modal/login-modal.component';
 import { SignUpModalComponent } from './components/welcome/sign-up-modal/sign-up-modal.component';
+import { AboutComponent } from './components/about/about.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -31,7 +32,9 @@ import { SubscriptionItemDetailComponent } from './components/subscription-item-
 import { SubscriptionItemsTableComponent } from './components/subscription-list/subscription-items-table/subscription-items-table.component';
 import {MatListModule} from '@angular/material/list';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { AboutComponent } from './components/about/about.component';
+import { AddSubscriptionItemComponent } from './components/add-subscription-item/add-subscription-item.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +45,9 @@ import { AboutComponent } from './components/about/about.component';
     SignUpModalComponent,
     SubscriptionItemDetailComponent,
     SubscriptionItemsTableComponent,
-    AboutComponent
+    AboutComponent,
+    AddSubscriptionItemComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
