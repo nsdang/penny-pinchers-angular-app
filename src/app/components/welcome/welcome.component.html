@@ -27,10 +27,12 @@
   <!-- CONTAINERS -->
   <!-- container puts padding around itself while container-fluid fills the whole screen. Bootstap grids require a container. -->
   <div class="container" id="ref" style="padding-top: 70px">
-    <div class="jumbotron" style="height: 700px;">
+    <div class="jumbotron" style="height: 700px; background-color: #654C4F;-moz-box-shadow: 30px 2px 10px rgba(0,0,0,.5);
+    -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);box-shadow: 1px 2px 10px rgba(0,0,10,1);" >
       <!--         Row #1              -->
       <div style="text-align: center;">
-        <h1 textstyle="font-size: xx-large;" style="text-align: center;" ><p class="lc">{{ title }}</p></h1>
+        <h1 textstyle="font-size: xx-large;" style="text-align: center; font-size: 40px;
+        color:white;" ><p class="lc"><b>{{ title }}</b></p></h1>
       </div>
 
       <!-- Row #2 - Login button -->
@@ -40,7 +42,8 @@
           
           <button
             class="button"
-            style="background-color:brown;width: 100px;height:100px;"
+            style="background-color:brown;width: 100px;height:100px;-moz-box-shadow: 30px 2px 10px rgba(0,0,0,.5);
+            -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);box-shadow: 1px 2px 10px rgba(0,0,10,1);"
             (click) = "openLogInModal()"
           >
             <p style="color: white;" class="lc">Login</p>
