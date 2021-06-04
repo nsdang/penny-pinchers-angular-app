@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-subscription-item.component.css']
 })
 export class AddSubscriptionItemComponent implements OnInit {
+  optionsSubType = ['Trial', 'Standard', 'Premium', 'None'];
+  optionsRecur = ['Annually', 'Monthly', 'Daily'];
+  optionsReminder = ['Email', 'Phone#'];
+
+
 
   constructor() { }
 

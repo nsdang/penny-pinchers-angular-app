@@ -1,0 +1,20 @@
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.fill-portal-container {
+  margin-top: 30pt;
+  margin-bottom: 30pt;
+}
+
+.save-button {
+  margin-top: 20px;
+  margin-right: 320px;
+  float: right;
+}
+.cancel-button {
+  margin-top: 20px;
+  margin-right: 20px;
+  float: right;
+}
