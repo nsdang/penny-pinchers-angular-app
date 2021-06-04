@@ -11,6 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { HashLocationStrategy, PathLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 import { FormsModule } from '@angular/forms';
@@ -30,7 +31,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { SubscriptionItemDetailComponent } from './components/subscription-item-detail/subscription-item-detail.component';
 import { SubscriptionItemsTableComponent } from './components/subscription-list/subscription-items-table/subscription-items-table.component';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AddSubscriptionItemComponent } from './components/add-subscription-item/add-subscription-item.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -73,7 +74,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MatListModule,
     MatCheckboxModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
