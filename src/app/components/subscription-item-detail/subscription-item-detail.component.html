@@ -1,12 +1,4 @@
-<mat-toolbar>
-  <button mat-icon-button class="example-icon" (click)="onClickBack()">
-    <mat-icon>keyboard_backspace</mat-icon>
-  </button>
-  <span class="itemname">{{ itemDetail.serviceName | uppercase }} Details</span>
-  <span class="spacer"></span>
-  <button class="aboutButton" mat-raised-button color="primary" (click)="onClickAbout()">About</button>
-  <button class="profileButton" mat-raised-button color="primary">Login as </button>
-</mat-toolbar>
+<app-navbar></app-navbar>
 
 <div class="example-container">
   <mat-grid-list cols="2" rowHeight="10:1">

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SubscriptionService {
-  subscriptionUrl:string = '/';
+  subscriptionUrl:string = 'http://pennypinchers.azurewebsites.net/';
 
   constructor(private http:HttpClient) { }
 
