@@ -14,7 +14,7 @@
 
     <p>First time user?</p>
     <button (click) = openSignUpDialog()>Sign up</button><br/><br/>
-    <button type = "submit" style="float: inline-end;"><a href="subscriptions/1">Login</a></button><br/><br>
+    <button (click) = "close()" type = "submit" style="float: inline-end;"><a [routerLink]="['/subscriptions/11']">Login</a></button><br/><br>
     <button (click) = "close()" style="float: right;">Cancel</button>
 
 </form>
