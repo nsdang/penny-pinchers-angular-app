@@ -9,6 +9,7 @@ import { AddSubscriptionItemComponent } from './components/add-subscription-item
 const routes: Routes = [
   { path: 'home', component: WelcomeComponent },
   { path: 'addSubscription', component: AddSubscriptionItemComponent },
+  //{ path: 'addSubscription/:listId', component: AddSubscriptionItemComponent },
   { path: 'subscriptions/:userId', component: SubscriptionListComponent },
   { path: 'subscription/:itemId', component: SubscriptionItemDetailComponent, },
   { path: 'about', component: AboutComponent},

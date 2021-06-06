@@ -27,4 +27,9 @@ export class SubscriptionService {
   updateSubscriptionDetail(index: string, newDetail:SubscriptionItem ):Observable<SubscriptionItem> {
     return this.http.put<SubscriptionItem>(this.subscriptionUrl + 'app/item/' + index, newDetail);
   }
+
+  // create new subscription
+  createNewSubscription(newDetail:SubscriptionItem):Observable<SubscriptionItem> {
+    return this.http.post<SubscriptionItem>(this.subscriptionUrl + 'app/item/',newDetail);
+  }
 }

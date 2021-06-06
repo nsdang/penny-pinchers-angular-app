@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 import { SubscriptionService } from '../../services/subscription.service';
 import { SubscriptionItemModelAngular } from '../../models/ISubscriptionItemModelAngular'
 import { Router } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 
 @Component({
@@ -13,19 +14,25 @@ import { Router } from '@angular/router';
 })
 
 export class SubscriptionListComponent implements OnInit {
+  userId!: string | null;
+  listId!: number;
 
+  
   constructor(private route: ActivatedRoute,
     private location: Location,
     private allItemsService: SubscriptionService,
-    private router: Router) { }
+    private router: Router) { 
+  }
 
   ngOnInit(): void {
+    this.userId = this.route.snapshot.paramMap.get('userId')
   }
 
-  addNewItem() {
-    let route = '/addSubscription';
-    this.router.navigate([route]);
-  }
+
+  // addNewItem() {
+  //   let route = '/addSubscription';
+  //   this.router.navigate([route], listId);
+  // }
 }
 
 
