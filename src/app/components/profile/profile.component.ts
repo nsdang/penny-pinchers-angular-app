@@ -39,33 +39,32 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit(): void {
+         // First get the product id from the current route.
+         const routeParams = this.route.snapshot.paramMap;
+         this.itemIdFromRoute = routeParams.get('itemId');
+     
+         // Call service for item detail
+         this.subscriptionService.getSubscriptionDetail(this.itemIdFromRoute).subscribe((subItem) => {
+           this.itemDetail = subItem;
+         },
+        
+        this.userId = this.route.snapshot.params['userId']);
+        this.allItemsService.getAllSubscriptionItems(this.userId)
+        .subscribe(
+          result => {
+            this.items = result;
+          },
+        );
   }
 
   getTotalSubscriptionsCount(): number{
-    return this.allItemsService.getAllSubscriptionItems.length;
+    return this.items.length;
   }
 
   getTotalTrialSubscriptionsCount(): number
   {
-     // First get the product id from the current route.
-     const routeParams = this.route.snapshot.paramMap;
-     this.itemIdFromRoute = routeParams.get('itemId');
- 
-     // Call service for item detail
-     this.subscriptionService.getSubscriptionDetail(this.itemIdFromRoute).subscribe((subItem) => {
-       this.itemDetail = subItem;
-     },
-    
-    this.userId = this.route.snapshot.params['userId']);
-    this.allItemsService.getAllSubscriptionItems(this.userId)
-    .subscribe(
-      result => {
-        this.items = result;
-      },
-    );
-
       for(let i = 0; i < this.items.length; i++){
-        if(this.itemDetail.subscriptionType == 'Trial'){
+        if(this.items[i].subscriptionType == 'Trial'){
           this.count++;
         }
       }
@@ -74,25 +73,8 @@ export class ProfileComponent implements OnInit {
 
   getTotalStandardSubscriptionsCount(): number
   {
-     // First get the product id from the current route.
-     const routeParams = this.route.snapshot.paramMap;
-     this.itemIdFromRoute = routeParams.get('itemId');
- 
-     // Call service for item detail
-     this.subscriptionService.getSubscriptionDetail(this.itemIdFromRoute).subscribe((subItem) => {
-       this.itemDetail = subItem;
-     },
-    
-    this.userId = this.route.snapshot.params['userId']);
-    this.allItemsService.getAllSubscriptionItems(this.userId)
-    .subscribe(
-      result => {
-        this.items = result;
-      },
-    );
-
       for(let i = 0; i < this.items.length; i++){
-        if(this.itemDetail.subscriptionType == 'Standard'){
+        if(this.items[i].subscriptionType == 'Standard'){
           this.count++;
         }
       }
@@ -101,25 +83,8 @@ export class ProfileComponent implements OnInit {
 
   getTotalPremiumSubscriptionsCount(): number
   {
-     // First get the product id from the current route.
-     const routeParams = this.route.snapshot.paramMap;
-     this.itemIdFromRoute = routeParams.get('itemId');
- 
-     // Call service for item detail
-     this.subscriptionService.getSubscriptionDetail(this.itemIdFromRoute).subscribe((subItem) => {
-       this.itemDetail = subItem;
-     },
-    
-    this.userId = this.route.snapshot.params['userId']);
-    this.allItemsService.getAllSubscriptionItems(this.userId)
-    .subscribe(
-      result => {
-        this.items = result;
-      },
-    );
-
       for(let i = 0; i < this.items.length; i++){
-        if(this.itemDetail.subscriptionType == 'Premium'){
+        if(this.items[i].subscriptionType == 'Premium'){
           this.count++;
         }
       }
