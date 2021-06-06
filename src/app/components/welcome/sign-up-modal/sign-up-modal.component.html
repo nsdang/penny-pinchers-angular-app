@@ -21,7 +21,7 @@
     </label>
     <input type="text" placeholder="Password" name="confirmpwd" /><br /><br />
 
-    <button type = "submit" style="float: inline-end;"><a href="list">Sign up</a></button><br/><br>
+    <button (click) = "close()" type = "submit" style="float: inline-end;"><a [routerLink]="['/subscriptions/11']">Sign up</a></button><br/><br>
     <button (click) = "close()" style="float: right;">Cancel</button>
   </form>
 </div>
