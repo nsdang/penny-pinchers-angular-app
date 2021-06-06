@@ -5,6 +5,7 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { SubscriptionItemDetailComponent } from './components/subscription-item-detail/subscription-item-detail.component';
 import { AboutComponent } from './components/about/about.component';
 import { AddSubscriptionItemComponent } from './components/add-subscription-item/add-subscription-item.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   { path: 'home', component: WelcomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'subscriptions/:userId', component: SubscriptionListComponent },
   { path: 'subscription/:itemId', component: SubscriptionItemDetailComponent, },
   { path: 'about', component: AboutComponent},
+  { path: 'profile', component: ProfileComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 

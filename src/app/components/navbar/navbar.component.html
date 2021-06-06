@@ -1,9 +1,11 @@
 <mat-toolbar>
-    <a [routerLink]="['/about']" button class="aboutButton" mat-raised-button color="primary">About</a>
-    <div class="profile-container">
+    <a routerLink = "/about" button class="aboutButton" mat-raised-button color="primary">About</a>
+    <div class="profile-container" >
+        <a [routerLink]="['/profile']" class ='brand-link'>
         <button mat-icon-button color="primary">
             <mat-icon class="accountIcon">account_circle</mat-icon>
         </button> 
+        </a>
     </div>
 
     <div class="app-brand">
