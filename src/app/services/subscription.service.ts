@@ -9,8 +9,8 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class SubscriptionService {
-  // subscriptionUrl:string = 'http://localhost:8080/';
-  subscriptionUrl:string = 'https://pennypinchers.azurewebsites.net/';
+  subscriptionUrl:string = 'http://localhost:8080/';
+  // subscriptionUrl:string = 'https://pennypinchers.azurewebsites.net/';
 
   httpOptions = {
     observe:'body',
