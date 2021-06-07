@@ -2,6 +2,107 @@
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
+#div1
+{
+  padding-bottom: 36px;
+}
+
+#div2
+{
+  padding-top: 70px;
+}
+
+#div3
+{
+  height: 700px; 
+  background-color: #654C4F;
+  -moz-box-shadow: 30px 2px 10px rgba(0,0,0,.5);
+  -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+  box-shadow: 1px 2px 10px rgba(0,0,10,1);
+}
+
+@media screen and (max-width: 1200px) {
+  #div3
+    {
+      height: 733px; 
+      background-color: #654C4F;
+      -moz-box-shadow: 30px 2px 10px rgba(0,0,0,.5);
+      -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+      box-shadow: 1px 2px 10px rgba(0,0,10,1);
+    }
+}
+
+@media screen and (max-width: 770px) {
+  #div3
+    {
+      height: 765px; 
+      background-color: #654C4F;
+      -moz-box-shadow: 30px 2px 10px rgba(0,0,0,.5);
+      -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+      box-shadow: 1px 2px 10px rgba(0,0,10,1);
+    }
+}
+
+@media screen and (max-width: 575px) {
+  #div3
+    {
+      height: 733px; 
+      background-color: #654C4F;
+      -moz-box-shadow: 30px 2px 10px rgba(0,0,0,.5);
+      -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+      box-shadow: 1px 2px 10px rgba(0,0,10,1);
+    }
+}
+
+#div4
+{
+  text-align: center;
+}
+
+#div5
+{
+  padding: 20px;
+  height: 600px;
+}
+
+#div6
+{
+  width: 200px;
+}
+
+#buttonStyle
+{
+  background-color:brown;
+  width: 100px;
+  height:100px;
+  -moz-box-shadow: 30px 2px 10px rgba(0,0,0,.5);
+  -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+  box-shadow: 1px 2px 10px rgba(0,0,10,1);
+}
+
+#textStyle
+{
+  color: white;
+}
+
+#imgStyle
+{
+  width: 350px;
+  height:600px;
+}
+
+#h1s
+{
+  text-align: center;
+  font-size: 40px;
+  color:white;
+}
+
+#h3s
+{
+  color: brown;
+}
+
 .button {
     width: 250px;
     height: 200px;

@@ -8,26 +8,29 @@
 <app-navbar></app-navbar>
 
 <div style="padding-top: 70px;">
-    <div class="container" style="border-radius: 120px;height: 530px; width: 1000px;align-content: center; margin:auto; background-color: #654C4F;-moz-box-shadow: 30px 2px 10px rgba(0,0,0,.5);
-    -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);box-shadow: 1px 2px 10px rgba(0,0,10,1);" >
-        <div style="padding-top: 40px;">
-            <h1 id="lc"style="font-size:80px; text-align: center; color:white">{{userDetail.fname + ' ' + userDetail.lname}}</h1>
+    <div class="container" id="div2" >
+        <div id="div6">
+            <h1 id="h1s">{{userDetail.fname + ' ' + userDetail.lname}}</h1>
         </div>
         <hr class="solid">
         <div id="lc" class="row" style="padding-top:40px; padding-left: 20px;">
             <p style="font-size:40px; text-align: center; color:white">Total Subscriptions: {{totalSubscriptionsCount}}</p>
         </div>
-        <div id="lc" class="row" style="padding-top:40px; padding-left: 20px;">
-            <p style="font-size:40px; text-align: center; color:white">Trial Subscriptions: {{totalTrialSubscriptionsCount}}</p>
+        <div id="div3" class="row">
+            <p id="textStyle">Trial Subscriptions: {{totalTrialSubscriptionsCount}}</p>
         </div>
-        <div id="lc" class="row" style="padding-top:40px; padding-left: 20px;">
-            <p style="font-size:40px; text-align: center; color:white">Standard Subscriptions: {{totalStandardSubscriptionsCount}}</p>
+        <div id="div3" class="row">
+            <p id="textStyle">Standard Subscriptions: {{totalStandardSubscriptionsCount}}</p>
         </div>
-        <div id="lc" class="row" style="padding-top:40px; padding-left: 20px;">
-            <p style="font-size:40px; text-align: center; color:white">Premium Subscriptions: {{totalPremiumSubscriptionsCount}}</p>
+        <div id="div3" class="row">
+            <p id="textStyle">Premium Subscriptions: {{totalPremiumSubscriptionsCount}}</p>
         </div>
-        <div id="lc" class="row" style="padding-top:10px;">
-            <div class="col" style="padding-right: 50px;"><a href="/auth/logout" class ='brand-link'><Button style="float: right;border-radius: 40px; height: 80px;width: 120px; background-color: grey; color: white;font-size: 25px;">LOGOUT</Button></a></div>
+        <div id="div3" class="row">
+            <div class="col" id="div5">
+                <a href="/auth/logout" class ='brand-link'>
+                    <Button id="buttonStyle">LOGOUT</Button>
+                </a>
+            </div>
         </div>
         
     </div>
