@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 import { SubscriptionService } from '../../services/subscription.service';
-import { SubscriptionItemModelAngular } from '../../models/ISubscriptionItemModelAngular'
 import { Router } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
+import { SubscriptionList} from '../../models/ISubscriptionListDetail';
 
 
 @Component({
@@ -14,8 +14,9 @@ import { switchMap } from 'rxjs/operators';
 })
 
 export class SubscriptionListComponent implements OnInit {
-  userId!: string | null;
-  listId!: number;
+  userId!: string;
+  listId!: Number;
+  listInfo!: SubscriptionList;
 
   
   constructor(private route: ActivatedRoute,
@@ -25,7 +26,15 @@ export class SubscriptionListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.userId = this.route.snapshot.paramMap.get('userId')
+    this.userId = this.route.snapshot.params['userId'];
+    this.allItemsService.getListInfo(this.userId)
+    .subscribe(
+      result => {
+        this.listInfo = result;
+        this.listId = this.listInfo.listId;
+        console.log('list' + this.listId);
+      },
+    );
   }
 
 

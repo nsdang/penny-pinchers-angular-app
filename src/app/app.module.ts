@@ -36,6 +36,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AddSubscriptionItemComponent } from './components/add-subscription-item/add-subscription-item.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { DeleteModalComponent } from './components/subscription-list/subscription-items-table/delete-modal/delete-modal.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     AboutComponent,
     AddSubscriptionItemComponent,
     NavbarComponent,
-    ProfileComponent
+    ProfileComponent,
+    DeleteModalComponent
   ],
   imports: [
     BrowserModule,

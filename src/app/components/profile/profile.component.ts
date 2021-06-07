@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SubscriptionService } from '../../services/subscription.service';
 import { SubscriptionItem } from '../../models/ISubscriptionItemDetail';
-import { SubscriptionItemModelAngular } from '../../models/ISubscriptionItemModelAngular'
 import { SubscriptionItemDetailComponent } from '../subscription-item-detail/subscription-item-detail.component';
 import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -13,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
   name: string = 'Profile Page'.toUpperCase();
-  items: SubscriptionItemModelAngular[];
+  items: SubscriptionItem[];
   totalSubscriptionsCount: number;
   totalTrialSubscriptionsCount: number;
   totalPremiumSubscriptionsCount: number;

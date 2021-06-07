@@ -6,7 +6,9 @@ export interface SubscriptionItem {
   dueDate: Date;
   price: Number;
   isArchived: Boolean;
-  subscriptionType: string;
-  recurringOption: string;
-  reminderMethod: string;
+  subscriptionType: String;
+  recurringOption: String;
+  reminderMethod: String;
 }
+
+

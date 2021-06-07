@@ -16,4 +16,8 @@ td,th {
 tr:hover {
     background-color: #E8EAF6;
     cursor: pointer;
-  }
+}
+
+.deleteIcon{
+    font-size: 30px;
+}
