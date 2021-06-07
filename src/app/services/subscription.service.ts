@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { SubscriptionItem } from '../models/ISubscriptionItemDetail';
 import { SubscriptionList} from '../models/ISubscriptionListDetail';
+import { User } from '../models/IUserDetail';
 import { Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -27,7 +28,7 @@ export class SubscriptionService {
   }
 
   // //get all subscription items OR the whole list
-  getAllSubscriptionItems(userIndex: string):Observable<SubscriptionItem[]>{
+  getAllSubscriptionItems(userIndex: string|null):Observable<SubscriptionItem[]>{
     return this.http.get<SubscriptionItem[]>(this.subscriptionUrl+ 'app/item/user/' + userIndex);
   }
 
@@ -47,9 +48,14 @@ export class SubscriptionService {
     return this.http.delete<SubscriptionItem>(this.subscriptionUrl+'app/item/' + itemIndex);
   }
 
-  // get List infor
+  // get List info
   getListInfo(userId:string):Observable<SubscriptionList>{
     return this.http.get<SubscriptionList>(this.subscriptionUrl+'app/list/user/' + userId);
+  }
+
+  // get User info
+  getUserInfo(userId:string|null):Observable<User>{
+    return this.http.get<User>(this.subscriptionUrl+'app/user/' + userId);
   }
 }
 

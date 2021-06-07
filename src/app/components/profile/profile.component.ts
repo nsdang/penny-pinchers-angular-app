@@ -4,6 +4,7 @@ import { SubscriptionItem } from '../../models/ISubscriptionItemDetail';
 import { SubscriptionItemDetailComponent } from '../subscription-item-detail/subscription-item-detail.component';
 import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
+import { User } from '../../models/IUserDetail';
 
 @Component({
   selector: 'app-profile',
@@ -12,15 +13,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
   name: string = 'Profile Page'.toUpperCase();
+
   items: SubscriptionItem[];
   totalSubscriptionsCount: number;
   totalTrialSubscriptionsCount: number;
   totalPremiumSubscriptionsCount: number;
   totalStandardSubscriptionsCount: number;
-  itemIdFromRoute: string | null | undefined;
-  itemDetail!: SubscriptionItem;
-  userId!: string;
-  listId!: number;
+
+  userIdFromRoute: string | null | undefined;
+  userDetail!: User;
+  
   count: number = 0;
 
   constructor(
@@ -40,18 +42,20 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
          // First get the product id from the current route.
          const routeParams = this.route.snapshot.paramMap;
-         this.itemIdFromRoute = routeParams.get('itemId');
-     
-         // Call service for item detail
-         this.subscriptionService.getSubscriptionDetail(this.itemIdFromRoute).subscribe((subItem) => {
-           this.itemDetail = subItem;
-         },
-        
-        this.userId = this.route.snapshot.params['userId']);
-        this.allItemsService.getAllSubscriptionItems(this.userId)
+         this.userIdFromRoute = routeParams.get('userId');
+
+         this.subscriptionService.getUserInfo(this.userIdFromRoute).subscribe((user) => {
+           this.userDetail = user;
+         })
+
+        this.allItemsService.getAllSubscriptionItems(this.userIdFromRoute)
         .subscribe(
           result => {
             this.items = result;
+            this.totalSubscriptionsCount = this.getTotalSubscriptionsCount();
+            this.totalTrialSubscriptionsCount = this.getTotalTrialSubscriptionsCount();
+            this.totalPremiumSubscriptionsCount = this.getTotalPremiumSubscriptionsCount();
+            this.totalStandardSubscriptionsCount = this.getTotalStandardSubscriptionsCount();
           },
         );
   }
@@ -62,6 +66,7 @@ export class ProfileComponent implements OnInit {
 
   getTotalTrialSubscriptionsCount(): number
   {
+    this.count = 0;
       for(let i = 0; i < this.items.length; i++){
         if(this.items[i].subscriptionType == 'Trial'){
           this.count++;
@@ -72,6 +77,7 @@ export class ProfileComponent implements OnInit {
 
   getTotalStandardSubscriptionsCount(): number
   {
+    this.count = 0;
       for(let i = 0; i < this.items.length; i++){
         if(this.items[i].subscriptionType == 'Standard'){
           this.count++;
@@ -82,6 +88,7 @@ export class ProfileComponent implements OnInit {
 
   getTotalPremiumSubscriptionsCount(): number
   {
+    this.count = 0;
       for(let i = 0; i < this.items.length; i++){
         if(this.items[i].subscriptionType == 'Premium'){
           this.count++;

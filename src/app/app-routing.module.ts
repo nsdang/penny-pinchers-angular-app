@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'subscriptions/:userId', component: SubscriptionListComponent },
   { path: 'subscription/:userId/:itemId', component: SubscriptionItemDetailComponent, },
   { path: 'about', component: AboutComponent},
-  { path: 'profile', component: ProfileComponent},
+  { path: 'profile/:userId', component: ProfileComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
