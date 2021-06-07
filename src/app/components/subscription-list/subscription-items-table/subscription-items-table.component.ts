@@ -16,7 +16,7 @@ export class SubscriptionItemsTableComponent implements OnInit {
   userId: string = '';
   items: SubscriptionItem[];
   response:any;
-
+  itemId!: Number;
   constructor(
     private route: ActivatedRoute,
     private location: Location,
@@ -53,6 +53,7 @@ export class SubscriptionItemsTableComponent implements OnInit {
   }
 
   openDeleteModal(itemId_param:Number) {
+    this.itemId = itemId_param;
     const dialogConfig = new MatDialogConfig();
     let dialogRef = this.matDialog.open(DeleteModalComponent, {
       width: '500px',
@@ -62,7 +63,19 @@ export class SubscriptionItemsTableComponent implements OnInit {
       data: { itemId: itemId_param}
     });
     
+    dialogRef.afterClosed().subscribe (param => {
+      this.allItemsService.deleteSubscription(this.itemId).subscribe((result) => {
+        console.log(result);
+      })
+
+      
+    })
+
   }
+
+  
+
+  
 
 
 
