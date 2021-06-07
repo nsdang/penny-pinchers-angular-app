@@ -21,7 +21,8 @@ export class AddSubscriptionItemComponent implements OnInit {
   selectedRecur: string | undefined;
   selectedReminder: string | undefined;
 
-  itemIdFromRoute: string | null | undefined;
+  listIdFromRoute: string | null | undefined;
+  userIdFromRoute: string | null | undefined;
   itemDetail!: SubscriptionItem;
 
   newItemDetail!: SubscriptionItem;
@@ -37,6 +38,10 @@ export class AddSubscriptionItemComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    const routeParams = this.route.snapshot.paramMap;
+    this.userIdFromRoute = routeParams.get('userId');
+    this.listIdFromRoute = routeParams.get('listId');
+
     // initialize formGroup
     this.newItemDetail = {
       itemId : -1,
@@ -72,8 +77,6 @@ export class AddSubscriptionItemComponent implements OnInit {
   }
 
   onClickSave(): void {
-    const itemId = String(this.itemIdFromRoute);
-
     console.log(this.formInput.controls)
 
     this.newItemDetail.serviceName = this.formInput.controls.serviceName.value;
@@ -86,7 +89,6 @@ export class AddSubscriptionItemComponent implements OnInit {
     this.subscriptionService.createNewSubscription(this.newItemDetail).subscribe((newItem) => {
       console.log(newItem)
     });
-    this.onClickBack();
   }
 }
 

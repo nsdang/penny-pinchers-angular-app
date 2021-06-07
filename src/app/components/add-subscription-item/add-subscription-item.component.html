@@ -64,8 +64,8 @@
             <mat-grid-tile></mat-grid-tile>
 
             <mat-grid-tile class="title">
-            <button mat-raised-button class="cancel-button" (click)="onClickBack()">Cancel</button>
-            <button mat-raised-button class="save-button" color="primary" (click)="onClickSave()">Create</button>
+            <button mat-raised-button class="cancel-button" [routerLink] = '["/subscriptions",userIdFromRoute]'>Cancel</button>
+            <button mat-raised-button class="save-button" color="primary" (click)="onClickSave()" [routerLink] = '["/subscriptions",userIdFromRoute]'>Create</button>
             </mat-grid-tile>
         </mat-grid-list>
     </div>

@@ -11,10 +11,10 @@
         </thead>
         <tbody>   
             <tr *ngFor="let item of items">
-                <td [routerLink] = '["/subscription",item.itemId]'>{{ item.serviceName }}</td>
-                <td [routerLink] = '["/subscription",item.itemId]'>{{ item.dueDate | date }}</td>
-                <td [routerLink] = '["/subscription",item.itemId]'> {{ item.subscriptionType }}</td>
-                <td [routerLink] = '["/subscription",item.itemId]'> {{ item.price }}</td>
+                <td [routerLink] = '["/subscription",userId,item.itemId]'>{{ item.serviceName }}</td>
+                <td [routerLink] = '["/subscription",userId,item.itemId]'>{{ item.dueDate | date }}</td>
+                <td [routerLink] = '["/subscription",userId,item.itemId]'> {{ item.subscriptionType }}</td>
+                <td [routerLink] = '["/subscription",userId,item.itemId]'> {{ item.price }}</td>
                 <td>
                     <button mat-icon-button color="primary" (click)="openDeleteModal(item.itemId)"><mat-icon class="deleteIcon">delete</mat-icon></button> 
 

@@ -20,6 +20,7 @@ export class SubscriptionItemDetailComponent implements OnInit {
   selectedReminder: string | undefined;
 
   itemIdFromRoute: string | null | undefined;
+  userIdFromRoute: string | null | undefined;
   itemDetail!: SubscriptionItem;
 
   constructor(
@@ -33,6 +34,7 @@ export class SubscriptionItemDetailComponent implements OnInit {
     // First get the product id from the current route.
     const routeParams = this.route.snapshot.paramMap;
     this.itemIdFromRoute = routeParams.get('itemId');
+    this.userIdFromRoute = routeParams.get('userId');
 
     // Call service for item detail
     this.subscriptionService.getSubscriptionDetail(this.itemIdFromRoute).subscribe((subItem) => {
@@ -87,6 +89,5 @@ export class SubscriptionItemDetailComponent implements OnInit {
     this.subscriptionService.updateSubscriptionDetail(itemId, this.itemDetail).subscribe((newItem) => {
       console.log(newItem)
     });
-    this.onClickBack();
   }
 }

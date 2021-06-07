@@ -10,9 +10,9 @@ import { ProfileComponent } from './components/profile/profile.component';
 const routes: Routes = [
   { path: 'home', component: WelcomeComponent },
   // { path: 'addSubscription', component: AddSubscriptionItemComponent },
-  { path: 'addSubscription/:listId', component: AddSubscriptionItemComponent },
+  { path: 'addSubscription/:userId/:listId', component: AddSubscriptionItemComponent },
   { path: 'subscriptions/:userId', component: SubscriptionListComponent },
-  { path: 'subscription/:itemId', component: SubscriptionItemDetailComponent, },
+  { path: 'subscription/:userId/:itemId', component: SubscriptionItemDetailComponent, },
   { path: 'about', component: AboutComponent},
   { path: 'profile', component: ProfileComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
