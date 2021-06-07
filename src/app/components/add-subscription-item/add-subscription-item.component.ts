@@ -13,9 +13,9 @@ import { formatDate } from '@angular/common';
   styleUrls: ['./add-subscription-item.component.css']
 })
 export class AddSubscriptionItemComponent implements OnInit {
-  optionsSubType = ['Trial', 'Standard', 'Premium', 'None'];
-  optionsRecur = ['Annually', 'Monthly', 'Daily'];
-  optionsReminder = ['Email', 'Phone#'];
+  optionsSubType = ['Trial', 'Standard', 'Premium'];
+  optionsRecur = ['Annually', 'Monthly', 'None'];
+  optionsReminder = ['Email']; //, 'Phone#'];
 
   selectedSubType: string | undefined;
   selectedRecur: string | undefined;
@@ -52,7 +52,7 @@ export class AddSubscriptionItemComponent implements OnInit {
       price: 0,
       isArchived : false,
       subscriptionType: "Standard",
-      recurringOption: "Monthly",
+      recurringOption: "None",
       reminderMethod: "Email"
     };
 

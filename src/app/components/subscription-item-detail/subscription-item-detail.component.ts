@@ -11,9 +11,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./subscription-item-detail.component.css'],
 })
 export class SubscriptionItemDetailComponent implements OnInit {
-  optionsSubType = ['Trial', 'Standard', 'Premium', 'None'];
-  optionsRecur = ['Annually', 'Monthly', 'Daily'];
-  optionsReminder = ['Email', 'Phone#'];
+  optionsSubType = ['Trial', 'Standard', 'Premium'];
+  optionsRecur = ['Annually', 'Monthly', 'None'];
+  optionsReminder = ['Email']; //, 'Phone#'];
 
   selectedSubType: string | undefined;
   selectedRecur: string | undefined;
@@ -50,18 +50,18 @@ export class SubscriptionItemDetailComponent implements OnInit {
           this.selectedSubType = this.optionsSubType[2];
           break;
         default:
-          this.selectedSubType = this.optionsSubType[3];
+          this.selectedSubType = this.optionsSubType[1];
       }
 
       switch (subItem.recurringOption){
         case 'Annually':
           this.selectedRecur = this.optionsRecur[0];
           break;
-        case 'Premium':
-          this.selectedRecur = this.optionsRecur[2];
+        case 'Monthly':
+          this.selectedRecur = this.optionsRecur[1];
           break;
         default:
-          this.selectedRecur = this.optionsRecur[1];
+          this.selectedRecur = this.optionsRecur[2];
           break;
       }
 
